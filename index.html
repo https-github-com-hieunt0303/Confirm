@@ -15,34 +15,34 @@
         <div class="grid">
             <div class="grid-row">
                 <div class="confirm-step">
-                    <div class="conform-step__info step1">
-                        <div class="conform-step__info-item active">
-                            <span class="conform-step__info-item-number active">1</span>
+                    <div class="confirm-step__info active js-step">
+                        <div class="confirm-step__info-item">
+                            <span class="confirm-step__info-item-number">1</span>
                         </div>
-                        <div class="conform-step__info-item-content">
-                            <span class="conform-step__info-item-content-detail active">Verify phone number</span>
+                        <div class="confirm-step__info-item-content">
+                            <span class="confirm-step__info-item-content-detail">Verify phone number</span>
                         </div>
-                        <div class="conform-step__line">
-                        </div>
-                    </div>
-
-                    <div class="conform-step__info step2">
-                        <div class="conform-step__info-item">
-                            <span class="conform-step__info-item-number">2</span>
-                        </div>
-                        <div class="conform-step__info-item-content">
-                            <span class="conform-step__info-item-content-detail">Create a password</span>
-                        </div>
-                        <div class="conform-step__line">
+                        <div class="confirm-step__line">
                         </div>
                     </div>
 
-                    <div class="conform-step__info step3">
-                        <div class="conform-step__info-item">
-                            <span class="conform-step__info-item-number">3</span>
+                    <div class="confirm-step__info js-step">
+                        <div class="confirm-step__info-item">
+                            <span class="confirm-step__info-item-number">2</span>
                         </div>
-                        <div class="conform-step__info-item-content">
-                            <span class="conform-step__info-item-content-detail">Completed</span>
+                        <div class="confirm-step__info-item-content">
+                            <span class="confirm-step__info-item-content-detail">Create a password</span>
+                        </div>
+                        <div class="confirm-step__line">
+                        </div>
+                    </div>
+
+                    <div class="confirm-step__info js-step">
+                        <div class="confirm-step__info-item">
+                            <span class="confirm-step__info-item-number">3</span>
+                        </div>
+                        <div class="confirm-step__info-item-content">
+                            <span class="confirm-step__info-item-content-detail">Completed</span>
                         </div>
                     </div>
 
@@ -114,23 +114,30 @@
         const passwordForm = document.querySelector('.confirm-content__password')
         const completedForm = document.querySelector('.confirm-content__completed')
 
+        const steps = document.querySelectorAll('.js-step')
 
+        console.log(steps)
         function showCodeForm (){
             codeForm.classList.add('open')
             codeForm.classList.remove('close')
+            steps.item(0).classList.add('active')
         }
         function hideCodeForm (){
             codeForm.classList.add('close')
+            steps.item(0).classList.remove('active')
         }
         function showPasswordForm(){
             passwordForm.classList.add('open')
             passwordForm.classList.remove('close')
+            steps.item(1).classList.add('active')
         }
         function hidePasswordForm(){
             passwordForm.classList.add('close')
+            steps.item(1).classList.remove('active')
         }
         function showCompletedForm(){
             completedForm.classList.add('open')
+            steps.item(2).classList.add('active')
         }
         
 
