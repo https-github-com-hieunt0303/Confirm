@@ -99,10 +99,13 @@
 }
 .confirm-content__back-link{
     text-decoration: none;
+    width: 20px;
+    display: flex;
+    align-items: center;
+    justify-items: center;
 }
 .confirm-content__header-icon{
     font-size: 1.8rem;
-    line-height: 1.8rem;
     color: var(--primary-color);
 }
 .confirm-content__heading{
@@ -149,11 +152,13 @@
     color: var(--white-color);
 }
 .confirm-content__code-msg{
+    text-align: center;
     font-size: 1.4rem;
     color: var(--text-color);
     margin-top: 24px;
 }
 .confirm-content__code-resend{
+    text-align: center;
     font-size: 1.4rem;
     color: var(--primary-color);
     margin-top: 8px;
